@@ -5,4 +5,5 @@
     <string name="input_tinggi">Tinggi</string>
     <string name="btn_hitung">Hitung</string>
     <string name="result">hasil</string>
+    <string name="pindah_activity">Pindah Activity</string>
 </resources>
