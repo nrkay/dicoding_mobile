@@ -18,6 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/pindah_activity_dengan_data" />
+    <Button
+        android:id="@+id/btn_parcelable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pindah menggunakan Parcelable" />
 
 
 

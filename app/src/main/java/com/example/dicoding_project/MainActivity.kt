@@ -10,14 +10,18 @@ import android.widget.Button
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btn_switch: Button
     private lateinit var btn_data: Button
+    private lateinit var btn_parcelable: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btn_switch = findViewById(R.id.btn_switch)
         btn_data= findViewById(R.id.btn_move_data)
+        btn_parcelable = findViewById(R.id.btn_parcelable)
+        btn_parcelable.setOnClickListener(this)
         btn_switch.setOnClickListener(this)
         btn_data.setOnClickListener(this)
+
 
 
     }
@@ -33,6 +37,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 intentData.putExtra(moveWithData.EXTRA_NAME, "Nur Khairiyah")
                 intentData.putExtra(moveWithData.EXTRA_AGE, 20)
                 startActivity(intentData)
+            }
+            R.id.btn_parcelable->{
+                val person = Person(
+                    "Nur Khairiyah",
+                    20,
+                    "nkhairiyah018@gmail.com",
+                    "Padang"
+                )
+                val moveIntentWithParcelable = Intent(this@MainActivity, moveWithParcelable::class.java)
+                moveIntentWithParcelable.putExtra(moveWithParcelable.EXTRA_PERSON, person)
+                startActivity(moveIntentWithParcelable)
             }
         }
     }
