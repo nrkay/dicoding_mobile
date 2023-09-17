@@ -7,4 +7,5 @@
     <string name="result">hasil</string>
     <string name="pindah_activity">Pindah Activity</string>
     <string name="pindah_activity_dengan_data">Pindah Activity dengan Data</string>
+    <string name="implisit">Implisit</string>
 </resources>

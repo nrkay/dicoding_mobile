@@ -23,6 +23,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pindah menggunakan Parcelable" />
+    <Button
+        android:id="@+id/moveWithImplisit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/implisit" />
 
 
 

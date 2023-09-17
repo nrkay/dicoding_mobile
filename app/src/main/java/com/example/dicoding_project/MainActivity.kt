@@ -1,6 +1,7 @@
 package com.example.dicoding_project
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btn_switch: Button
     private lateinit var btn_data: Button
     private lateinit var btn_parcelable: Button
+    private lateinit var btn_implisit: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,9 +20,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_switch = findViewById(R.id.btn_switch)
         btn_data= findViewById(R.id.btn_move_data)
         btn_parcelable = findViewById(R.id.btn_parcelable)
+        btn_implisit = findViewById(R.id.moveWithImplisit)
         btn_parcelable.setOnClickListener(this)
         btn_switch.setOnClickListener(this)
         btn_data.setOnClickListener(this)
+        btn_implisit.setOnClickListener(this)
 
 
 
@@ -48,6 +52,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveIntentWithParcelable = Intent(this@MainActivity, moveWithParcelable::class.java)
                 moveIntentWithParcelable.putExtra(moveWithParcelable.EXTRA_PERSON, person)
                 startActivity(moveIntentWithParcelable)
+            }
+            R.id.moveWithImplisit->{
+                val phoneNumber = "082167975729"
+                val dialPhone = Intent(Intent.ACTION_DIAL, Uri.parse("tel:%phoneNumber"))
+                startActivity(dialPhone)
             }
         }
     }
