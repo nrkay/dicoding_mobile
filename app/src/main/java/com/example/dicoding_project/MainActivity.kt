@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btn_switch: Button
     private lateinit var btn_data: Button
     private lateinit var btn_parcelable: Button
+    private lateinit var getText: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,9 +21,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_switch = findViewById(R.id.btn_switch)
         btn_data= findViewById(R.id.btn_move_data)
         btn_parcelable = findViewById(R.id.btn_parcelable)
+        getText= findViewById(R.id.text_resultFromAnotherActivity)
         btn_parcelable.setOnClickListener(this)
         btn_switch.setOnClickListener(this)
         btn_data.setOnClickListener(this)
+
+
 
 
 
