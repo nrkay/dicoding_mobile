@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Dicoding_project"
         tools:targetApi="31">
         <activity
+            android:name=".pageLinear"
+            android:exported="false" />
+        <activity
             android:name=".getBackData"
             android:exported="false" />
         <activity

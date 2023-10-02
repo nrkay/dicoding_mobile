@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btn_data: Button
     private lateinit var btn_parcelable: Button
     private lateinit var getText: TextView
+    private lateinit var btn_movePageLinear: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,13 +23,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_data= findViewById(R.id.btn_move_data)
         btn_parcelable = findViewById(R.id.btn_parcelable)
         getText= findViewById(R.id.text_resultFromAnotherActivity)
+        btn_movePageLinear= findViewById(R.id.btn_moveLinear)
+        btn_movePageLinear.setOnClickListener(this)
         btn_parcelable.setOnClickListener(this)
         btn_switch.setOnClickListener(this)
         btn_data.setOnClickListener(this)
-
-
-
-
 
     }
 
@@ -54,6 +53,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveIntentWithParcelable = Intent(this@MainActivity, moveWithParcelable::class.java)
                 moveIntentWithParcelable.putExtra(moveWithParcelable.EXTRA_PERSON, person)
                 startActivity(moveIntentWithParcelable)
+            }
+            R.id.btn_moveLinear-> {
+                val movePage = Intent(this@MainActivity, pageLinear::class.java)
+                startActivity(movePage)
             }
         }
     }

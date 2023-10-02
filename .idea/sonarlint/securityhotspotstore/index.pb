@@ -13,3 +13,5 @@ t
 Dapp/src/main/java/com/example/dicoding_project/moveWithParcelable.kt,8\a\8a3d8aa40c67c03cc43c800611a3de15445daefa
 n
 >app/src/main/java/com/example/dicoding_project/MainActivity.kt,0\4\04753c889425ec80c293adc1a9ece0fbc30eb564
+l
+<app/src/main/java/com/example/dicoding_project/pageLinear.kt,9\a\9a729edf976f49f3f2efd2fa3eb030620ee09d03

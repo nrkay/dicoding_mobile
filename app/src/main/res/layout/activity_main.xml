@@ -29,6 +29,12 @@
         android:layout_height="wrap_content"
         android:text="Pindah activity Untuk Result" />
 
+    <Button
+        android:id="@+id/btn_moveLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Page Linear Layout" />
+
     <TextView
         android:id="@+id/text_resultFromAnotherActivity"
         android:layout_width="match_parent"
