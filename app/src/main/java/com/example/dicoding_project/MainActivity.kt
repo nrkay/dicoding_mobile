@@ -33,9 +33,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (savedInstanceState != null){
             result.text = savedInstanceState.getString(STATE_RESULT)
         }
-
-
-
     }
 
 //    method pertama yg akan dibuat agar result tetap muncul bila hp rotation
