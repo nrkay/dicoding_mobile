@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var result: TextView
     private lateinit var btn: Button
 
-    companion object {
-        private const val STATE_RESULT = "state_result"
-    }
+  companion object{
+      private const val STATE_RESULT = "state_result"
+  }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn.setOnClickListener(this)
 
 //        menampilkan value yg ada di bundle
-        if (savedInstanceState != null) {
-            val textResult = savedInstanceState.getString(STATE_RESULT)
-            result.text = textResult
+        if (savedInstanceState != null){
+            result.text = savedInstanceState.getString(STATE_RESULT)
         }
+
 
 
     }
@@ -42,10 +42,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //    Dalam konteks Android, Bundle adalah bagian dari Android's android.os package, dan Anda dapat menggunakannya untuk mengirim dan menerima data antara komponen aplikasi Anda.
 //    Untuk menyimpan data disini menggunakan konsep Key-Value, dengan STATE_RESULT sebagai key dan isi dari tvResult sebagai value.
 //    Fungsi onSaveInstanceState akan dipanggil secara otomatis sebelum sebuah Activity hancur.
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        super.onSaveInstanceState(outState)
+//        outState.putString(STATE_RESULT, result.text.toString())
+//    }
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(STATE_RESULT, result.text.toString())
     }
+
+
 
     override fun onClick(view: View?) {
         if (view?.id==R.id.btn_result){
