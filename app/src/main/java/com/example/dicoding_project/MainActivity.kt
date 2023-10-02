@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var inputLength: EditText
     private lateinit var result: TextView
     private lateinit var btn: Button
-  companion object{
-      private const val STATE_RESULT = "state_result"
-  }
+companion object{
+    private const val STATE_RESULT = "state_result"
+}
 
 
 
