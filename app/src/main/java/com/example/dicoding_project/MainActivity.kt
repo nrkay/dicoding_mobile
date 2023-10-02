@@ -15,17 +15,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
         btn_switch = findViewById(R.id.btn_switch)
         btn_switch.setOnClickListener(this)
-
-
     }
 
     override fun onClick(v: View?) {
-        when (v?.id){
-            R.id.btn_switch->{
-                val moveIn = Intent(this@MainActivity, moveActivity::class.java)
-                startActivity(moveIn)
-            }
-        }
+       when(v?.id){
+           R.id.btn_switch -> {
+               val move = Intent(this@MainActivity, moveActivity::class.java)
+               startActivity(move)
+           }
+       }
     }
 
 }
