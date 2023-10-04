@@ -20,13 +20,9 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/pixel_google" />
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                style="@style/TextContent.BodyMedium.White.MarginAll"
                 android:layout_gravity="bottom"
                 android:text="@string/dummy_photos"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
                 android:background="#4D000000"
                 android:drawablePadding="4dp"
                 android:gravity="center_vertical"
@@ -34,10 +30,8 @@
                 android:drawableStart="@drawable/ic_collections_white_18dp" />
         </FrameLayout>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TextContent.HeadlineMedium.Bold"
             android:text="@string/dummy_value"
-            android:textSize="27sp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             />
@@ -136,6 +130,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/my_name" />
         </LinearLayout>
+        <Button
+            style="@style/ButtonGeneral.SecondaryVariant"
+            android:layout_margin="10dp"
+            android:text="Beli" />
     </LinearLayout>
 
 
