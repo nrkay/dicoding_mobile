@@ -9,10 +9,16 @@
     android:padding="16dp"
     tools:context=".MainActivity">
     <Button
+        style="@style/buttonSwitch"
         android:id="@+id/btn_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/contoh" />
+
+    <Button
+        style="@style/Widget.Material3.Button"
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 
 
 
