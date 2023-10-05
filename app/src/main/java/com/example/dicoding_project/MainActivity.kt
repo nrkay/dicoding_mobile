@@ -30,8 +30,9 @@ companion object{
         btn.setOnClickListener(this)
 
 //        menampilkan value yg ada di bundle
-        if (savedInstanceState != null){
-            result.text = savedInstanceState.getString(STATE_RESULT)
+        if (savedInstanceState != null) {
+            val hasil = savedInstanceState.getString(STATE_RESULT)
+            result.text = hasil
         }
     }
 
@@ -49,7 +50,6 @@ companion object{
         super.onSaveInstanceState(outState)
         outState.putString(STATE_RESULT, result.text.toString())
     }
-
 
 
     override fun onClick(view: View?) {
