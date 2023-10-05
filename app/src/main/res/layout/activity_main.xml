@@ -12,8 +12,34 @@
         android:id="@+id/btn_switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/contoh" />
+        android:text="@string/pindah_activity" />
+    <Button
+        android:id="@+id/btn_move_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pindah_activity_dengan_data" />
+    <Button
+        android:id="@+id/btn_parcelable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pindah menggunakan Parcelable" />
+    <Button
+        android:id="@+id/btn_getBackData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pindah activity Untuk Result" />
 
+    <Button
+        android:id="@+id/btn_moveLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Page Linear Layout" />
+
+    <TextView
+        android:id="@+id/text_resultFromAnotherActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
 
 
 
