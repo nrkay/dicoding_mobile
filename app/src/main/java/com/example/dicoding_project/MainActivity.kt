@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.example.dicoding_project.View.WeatherPage
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btn_parcelable: Button
     private lateinit var getText: TextView
     private lateinit var btn_movePageLinear: Button
+    private lateinit var btn_list: Button
+    private lateinit var btn_cuasa: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +25,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_switch = findViewById(R.id.btn_switch)
         btn_data= findViewById(R.id.btn_move_data)
         btn_parcelable = findViewById(R.id.btn_parcelable)
-        getText= findViewById(R.id.text_resultFromAnotherActivity)
         btn_movePageLinear= findViewById(R.id.btn_moveLinear)
+        btn_cuasa= findViewById(R.id.btn_weather)
+        btn_cuasa.setOnClickListener(this)
+        btn_list= findViewById(R.id.btn_list)
+        btn_list.setOnClickListener(this)
+        btn_data.setOnClickListener(this)
         btn_movePageLinear.setOnClickListener(this)
         btn_parcelable.setOnClickListener(this)
         btn_switch.setOnClickListener(this)
@@ -32,6 +39,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id){
+            R.id.btn_weather -> {
+                val moveIn = Intent(this@MainActivity, WeatherPage::class.java)
+                startActivity(moveIn)
+            }
+            R.id.btn_list -> {
+                val moveIn = Intent(this@MainActivity, ListKonten::class.java)
+                startActivity(moveIn)
+            }
             R.id.btn_switch->{
                 val moveIn = Intent(this@MainActivity, moveActivity::class.java)
                 startActivity(moveIn)

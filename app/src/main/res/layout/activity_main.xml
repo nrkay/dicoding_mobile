@@ -35,10 +35,17 @@
         android:layout_height="wrap_content"
         android:text="View Page Linear Layout" />
 
-    <TextView
-        android:id="@+id/text_resultFromAnotherActivity"
+    <Button
+        android:id="@+id/btn_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="List Pahlawan"
+        android:gravity="center" />
+    <Button
+        android:id="@+id/btn_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Page Cuaca"
         android:gravity="center" />
 
 
